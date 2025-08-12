@@ -489,7 +489,8 @@
 - `Total_Trans_Ct` : 총 거래 횟수
 - `Total_Amt_Chng_Q4_Q1` : 1분기 대비 4분기 총 거래금액 변화율(Q4/Q1)
 - `Total_Ct_Chng_Q4_Q1`  : 1분기 대비 4분기 총 거래횟수 변화율(Q4/Q1)
-  
+
+---
 ### ✨ 인사이트
 ### 3.1.1. 거래활동(금액·횟수)의 절대수준 저조·감소 추세에 따른 이탈 위험 급증
 - `Total_Trans_Amt`, `Total_Trans_Ct`, `Total_Amt_Chng_Q4_Q1`, `Total_Ct_Chng_Q4_Q1` 컬럼과 타겟인 Attrition_Flag를 비교했을 때, 네 개의 독립변수 모두 값이 적을 수록 이탈율이 높다는 것을 알 수 있음
@@ -503,6 +504,7 @@
   </table>
 </div>
 
+---
 ### 3.1.2. 총 거래 금액
 - `Total_Trans_Amt` : 총 거래 금액
     - 거래 금액이 적을수록 이탈률이 높음
@@ -517,6 +519,7 @@
   </table>
 </div>
 
+---
 ### 3.1.3. 총 거래 횟수
 - `Total_Trans_Ct`  : 총 거래 횟수
     - 거래 횟수가 적을수록 이탈률이 높음
@@ -531,10 +534,21 @@
   </table>
 </div>
 
+---
 ### 3.1.4. 1분기 대비 4분기 총 거래금액 변화율(Q4/Q1)
 - `Total_Amt_Chng_Q4_Q1` : 1분기 대비 4분기 총 거래금액 변화율(Q4/Q1)
     - 4분기 대비해서 거래 금액이 줄어들었다면 이탈의 조짐을 보인다 할 수 있음.
     - 지속적인 사용이 안정적임
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_거래활동_분기별거래금액변화율.png" width="900" alt="EDA_거래활동_분기별거래금액변화율"><br />
+      </td>
+    </tr>
+  </table>
+</div>
+
 <div align="center">
   <table>
     <tr>
