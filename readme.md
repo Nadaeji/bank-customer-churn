@@ -259,7 +259,7 @@
 
 <!-- 1. 고객 기본 정보 분석 -->
 <details open>
-  <summary><b>1. 고객 기본 정보 분석</b> — Gender / Education_Level / Marital_Status / Income_Category / Card_Category</summary>
+  <summary><b>💰 1. 고객 기본 정보 분석</b> — Gender / Education_Level / Marital_Status / Income_Category / Card_Category</summary>
   <br>
 
   - 고객의 인구통계학적 특성을 나타내는 열들로, 개인적 배경이 이탈에 미치는 영향을 분석
@@ -402,9 +402,9 @@
       - 카드 등급이 높다고 반드시 충성도가 높은 건 아님 → **특정 등급 고객별 맞춤 관리 필요**
 </details>
 
----
+<!-- 2. 경제적 요인 -->
 <details>
-  <summary><b>2. 경제적 요인</b> — Income_Category / Credit_Limit / Total_Revolving_Bal / Avg_Utilization_Ratio</summary>
+  <summary><b>💰 2. 경제적 요인</b> — Income_Category / Credit_Limit / Total_Revolving_Bal / Avg_Utilization_Ratio</summary>
   <br>
 
   - 고객의 재정 상태와 신용카드 사용 패턴을 나타내는 열들로, 경제적 요인이 이탈에 미치는 영향 파악
@@ -489,9 +489,9 @@
   - 소득의 구간이 높을수록 이용률 또한 감소되는 것을 확인
 </details>
 
----
+<!-- 3. 거래 활동 -->
 <details>
-  <summary><b>3. 거래 활동</b> — Total_Trans_Amt / Total_Trans_Ct / Total_Amt_Chng_Q4_Q1 / Total_Ct_Chng_Q4_Q1</summary>
+  <summary><b>💰 3. 거래 활동</b> — Total_Trans_Amt / Total_Trans_Ct / Total_Amt_Chng_Q4_Q1 / Total_Ct_Chng_Q4_Q1</summary>
   <br>
   
   - 고객의 카드 거래 활동과 그 변화 추이를 나타내는 열들로, 사용 패턴이 이탈에 미치는 영향 분석
@@ -576,9 +576,9 @@
   - 특히 변화량이 0.5 이하인 고객에서 **급격한 이탈 증가 현상**이 포착됨
 </details>
 
----
+<!-- 4. 은행 관계 -->
 <details>
-  <summary><b>4. 은행 관계</b> — Months_on_book / Total_Relationship_Count / Months_Inactive_12_mon / Contacts_Count_12_mon</summary>
+  <summary><b>💰 4. 은행 관계</b> — Months_on_book / Total_Relationship_Count / Months_Inactive_12_mon / Contacts_Count_12_mon</summary>
   <br>
   
   - 은행과의 관계 지속성과 상호작용 빈도를 나타내는 열들로, 충성도와 이탈 간 연관성 파악
@@ -680,9 +680,9 @@
   </div>
 </details>
 
----
+<!-- 5. 카드 및 신용 상태 -->
 <details>
-  <summary><b>5. 카드 및 신용 상태</b> — Card_Category / Avg_Open_To_Buy</summary>
+  <summary><b>💰 5. 카드 및 신용 상태</b> — Card_Category / Avg_Open_To_Buy</summary>
   <br>
   
   - 카드 종류와 신용 사용 가능 금액, 사전 계산된 이탈 확률을 포함하며, 카드 관련 특성이 이탈에 미치는 영향 분석
@@ -765,7 +765,7 @@
 
 ---
 ## 🏦 모델 선정 및 성능 평가 🏦
-### 💰 1차 모델 학습_ 3가지 컬럼 제거 💰
+### 💰 1차 모델 학습_ 3가지 컬럼 제거 
 - 제거한 컬럼명
 
 | **컬럼명** | **의미** |
@@ -847,7 +847,7 @@
 </div>
 
 ---
-### 💰 2차 모델 학습_ Total_ 컬럼 제외 💰
+### 💰 2차 모델 학습_ Total_ 컬럼 제외 
 
 🔹 LightGBM
 <div align="center">
@@ -883,7 +883,7 @@
 </div>
 
 ---
-### 💰 3차 모델 학습_ Total_ 컬럼 제외 & SMOTE 💰
+### 💰 3차 모델 학습_ Total_ 컬럼 제외 & SMOTE 
 
 🔹 LightGBM
 <div align="center">
@@ -918,7 +918,7 @@
   </table>
 </div>
 
-### 💰 4차 모델 학습_ Fake 데이터 추가 (최종) 💰
+### 💰 4차 모델 학습_ Fake 데이터 추가 (최종) 
 
 🔹 LightGBM
 <div align="center">
@@ -987,7 +987,7 @@
 </div>
 
 ---
-### 💰 평가지표 💰
+### 💰 평가지표 
 
 🔹 **정확도 (Accuracy)**  | **정밀도 (Precision)** | **재현율 (Recall)** | **F1-score** | **ROC-AUC Curve**  
 
