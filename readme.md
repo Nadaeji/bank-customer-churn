@@ -257,11 +257,10 @@
 ## 🏦 EDA 및 이탈과의 관계 분석 🏦
 - 각 칼럼명의 정의가 명확히 되어 있지 않아 이탈과의 **관계** 분석 진행
 
-### 1. 고객 기본 정보 분석
+### 💰 1. 고객 기본 정보 분석
 - 고객의 인구통계학적 특성을 나타내는 열들로, 개인적 배경이 이탈에 미치는 영향을 분석
 
 ### 1.1. 특성
-
 - `Gender`: 성별
 - `Education_Level`: 교육수준
 - `Marital_Status`: 결혼여부
@@ -269,20 +268,25 @@
 - `Card_Category`: 카드등급
 
 ### 1.1.1. 성별에 따른 고객 비율 (이탈 vs 기존)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_고객기본정보_성별.png" width="900" alt="EDA_고객기본정보_성별"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
-![image.png](attachment:f2dec5bb-4c3e-4f89-8e84-d4a5009fa085:image.png)
-
----
 ### ✨ 인사이트
-
 - 여성 고객을 대상으로 한 **이탈 방지 캠페인 또는 충성도 프로그램** 설계 필요
     - 전체적으로 **여성 고객의 이탈 비율(85.4%)이 남성 고객(82.6%)보다 높음**
     - 성별에 따른 고객 행동 패턴 차이가 일부 존재할 수 있음
-    - 하지만 차이는 크지 않기 때문에, **성별 단독 변수로는 강력한 예측 변수로 보기 어렵움**
+    - 하지만 차이는 크지 않기 때문에, **성별 단독 변수로는 강력한 예측 변수로 보기 어려움**
     - **다른 변수와 결합 분석(예: 성별 + 소득 + 카드 등급)** 필요
 
+---
 ### 1.1.2. Education_Level (교육수준) - 고객 이탈 여부
-
 | **교육 수준** | **기존 고객 수** | **이탈 고객 수** | **기존 고객 비율** | **이탈 고객 비율** |
 | --- | --- | --- | --- | --- |
 | High School | 1,707 | 306 | 84.8% | 15.2% |
@@ -293,20 +297,25 @@
 | Doctorate | 356 | 95 | 78.9% | 21.1% |
 | Unknown | 1,263 | 256 | 83.1% | 16.9% |
 
----
-![image.png](attachment:fd666a97-72e7-4bac-93d3-f87770fa3959:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_고객기본정보_교육수준.png" width="900" alt="EDA_고객기본정보_교육수준"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
----
 ### ✨ 인사이트
-
 - 낮은 교육 수준의 고객은 **상품 이해도 부족**, **채널 활용도 낮음** 등의 이유로 이탈 가능성 큼
 - 이들을 위한 **맞춤형 커뮤니케이션** 전략 중요
     - 전반적으로 **고학력자일수록 이탈률이 높아지는 경향**
     - 특히 **박사학위 고객(21.1%):** 가장 높은 이탈률 → **높은 지적 수준의 고객일수록 이탈 민감도↑**
     - 학력은 예측 변수로 활용 가치 있음
 
+---
 ### 1.1.3. Marital_Status (결혼 여부) - 고객 이탈 여부
-
 | **결혼 상태** | **기존 고객 수** | **이탈 고객 수** | **기존 고객 비율** | **이탈 고객 비율** |
 | --- | --- | --- | --- | --- |
 | Married | 3,978 | 709 | 84.9% | 15.1% |
@@ -314,19 +323,25 @@
 | Divorced | 627 | 121 | 83.8% | 16.2% |
 | Unknown | 620 | 129 | 82.8% | 17.2% |
 
----
 
-![image.png](attachment:c9c8c21d-df20-47a3-9904-68b7601c2390:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_고객기본정보_결혼정보.png" width="900" alt="EDA_고객기본정보_결혼정보"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
----
 ### ✨ 인사이트
-
 - 기혼자는 재정적으로 안정적일 가능성이 크고, 장기적 관점에서 금융상품을 유지하려는 성향이 있습니다.
 - 반면 **싱글/이혼 고객층은 보다 적극적인 고객관리나 혜택 제공이 필요**할 수 있습니다.
     - **기혼 고객의 이탈률이 가장 낮음**
     - 결혼 상태가 안정된 고객은 **서비스 유지 확률이 더 높음**
     - **미혼/이혼/불명 상태일수록 이탈 가능성↑**
 
+---
 ### 1.1.4. Income_Category (소득 수준) - 고객 이탈 여부
 
 | **소득 범위** | **기존 고객 수** | **이탈 고객 수** | **기존 고객 비율** | **이탈 고객 비율** |
@@ -338,10 +353,16 @@
 | Less than $40K | 2,949 | 612 | 82.8% | 17.2% |
 | Unknown | 925 | 187 | 83.2% | 16.8% |
 
----
-![image.png](attachment:099089cd-63a6-40be-95e2-7d7e1f57d7e0:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_고객기본정보_소득수준.png" width="900" alt="EDA_고객기본정보_소득수준"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
----
 ### ✨ 인사이트
 - 중산층은 **타사 이동 여력**이 높고, **비용 대비 혜택 민감도**가 클 수 있습니다.
 - 해당 그룹을 위한 **차별화된 리텐션 전략**이 요구됩니다.
@@ -350,7 +371,7 @@
     
     → **중산층**이 가장 안정된 고객군일 가능성
     
-
+---
 ### 1.1.5. Card_Category (카드 등급) - 고객 이탈 여부
 | **카드 등급** | **기존 고객 수** | **이탈 고객 수** | **기존 고객 비율** | **이탈 고객 비율** |
 | --- | --- | --- | --- | --- |
@@ -359,10 +380,16 @@
 | Gold | 95 | 21 | 81.9% | 18.1% |
 | Platinum | 15 | 5 | **75.0%** | **25.0%** |
 
----
-![image.png](attachment:6d99baa4-d929-422d-8aec-93437e6503f8:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_고객기본정보_카드등급.png" width="900" alt="EDA_고객기본정보_카드등급"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
----
 ### ✨ 인사이트
 - 상위 등급 카드는 **혜택과 서비스 충성도**를 높이는 데 효과적입니다.
 - 중간 카드 등급 사용자의 이탈률이 높은 이유를 파악해, **혜택 개선** 또는 **등급 업그레이드 유도** 전략이 유효할 수 있습니다.
@@ -370,7 +397,8 @@
     - **Gold 등급 고객도 상대적으로 높은 이탈률**
     - 카드 등급이 높다고 반드시 충성도가 높은 건 아님 → **특정 등급 고객별 맞춤 관리 필요**
 
-### 2. 경제적 요인
+---
+### 💰 2. 경제적 요인
 - 고객의 재정 상태와 신용카드 사용 패턴을 나타내는 열들로, 경제적 요인이 이탈에 미치는 영향 파악
 
 ### **2.1. 특성**
@@ -382,38 +410,78 @@
 ---
 ### ✨ 인사이트
 ### 2.1.1. 이용률 대비 이탈 분류
-![이용률.png](attachment:662ad0ab-9a2e-4c17-bbf1-3d48cba227c2:이용률.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_경제적요인_이용률 대비 이탈 분류.png" width="900" alt="EDA_경제적요인_이용률 대비 이탈 분류"><br />
+      </td>
+    </tr>
+  </table>
+</div>
+
 - 이탈 고객들의 이용률이 유지 고객의 이용률보다 낮게 분포되어 있음
 
+---
 ### 2.1.2. 리볼빙 잔액 분포
-![리볼빙 잔액.png](attachment:3c19995d-225d-4abc-8ea5-04b706e601ea:리볼빙_잔액.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_경제적요인_리볼빙 잔액 분포.png" width="900" alt="EDA_경제적요인_리볼빙 잔액 분포"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - 이탈 고객들의 리볼빙 잔액이 유지고객보다 더 낮게 분포되어 있음을 확인
 
+---
 ### 2.1.3. 이용률 대비 리볼빙 잔액에 대한 고객 이탈 여부 분석
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_경제적요인_이용률 대비 리볼빙 잔액에 대한 고객 이탈 여부 분석.png" width="900" alt="EDA_경제적요인_이용률 대비 리볼빙 잔액에 대한 고객 이탈 여부 분석"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
-![방문 횟수와 리볼빙 잔액 상관관계.png](attachment:25e93d52-0e1a-4165-829f-3bfc77edf337:방문_횟수와_리볼빙_잔액_상관관계.png)
+- 이용률이 낮고 리볼빙 잔액이 낮은 고객의 이탈이 높게 나올 것으로 예상되었으나, 이용률 0.6 이상부터 이탈 고객의 리볼빙 잔액이 유지 고객보다 훨씬 높게 도출
 
-이용률이 낮고 리볼빙 잔액이 낮은 고객의 이탈이 높게 나올 것으로 예상되었으나, 
-
-이용률 0.6 이상부터 이탈 고객의 리볼빙 잔액이 유지 고객보다 훨씬 높게 도출되었습니다.
-
+---
 ### 2.1.4. 거래 횟수 대비 리볼빙 잔액
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_경제적요인_거래 횟수 대비 리볼빙 잔액.png" width="900" alt="EDA_경제적요인_거래 횟수 대비 리볼빙 잔액"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
-![거래횟수 대비 리볼빙.png](attachment:eea80096-0628-44cb-925c-e5ad9ca4e0c5:거래횟수_대비_리볼빙.png)
+- **유지 고객은 거래 횟수가 많을수록 평균 리볼빙 잔액이 증가**하는 경향이 있음
+- 이탈 고객의 경우, 일정 거래 횟수를 초과하면 리볼빙 잔액이 급증하는 패턴이 보임
+- 리볼빙 잔액이 적은 이탈 고객은 주로 중간 거래 횟수(40~80회) 구간에서 많이 존재
 
-**유지 고객은 거래 횟수가 많을수록 평균 리볼빙 잔액이 증가**하는 경향이 있음
-이탈 고객의 경우, 일정 거래 횟수를 초과하면 리볼빙 잔액이 급증하는 패턴이 보임
-리볼빙 잔액이 적은 이탈 고객은 주로 중간 거래 횟수(40~80회) 구간에서 많이 존재.
-
-### 2.1.5 소득 대비 평균 이용율 분석
-
-![소득,평균방문.png](attachment:6fceffb0-dfb9-4317-be91-9c2421c71307:소득평균방문.png)
+---
+### 2.1.5 소득 대비 평균 이용률 분석
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_경제적요인_소득 대비 평균 이용률 분석.png" width="900" alt="EDA_경제적요인_소득 대비 평균 이용률 분석"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - 소득의 구간이 높을수록 이용률 또한 감소되는 것을 확인
 
 ---
-### 3. 거래 활동
+### 💰 3. 거래 활동
 - 고객의 카드 거래 활동과 그 변화 추이를 나타내는 열들로, 사용 패턴이 이탈에 미치는 영향 분석
 
 ### **3.1. 특성**
@@ -425,26 +493,54 @@
 ### ✨ 인사이트
 ### 3.1.1. 거래활동(금액·횟수)의 절대수준 저조·감소 추세에 따른 이탈 위험 급증
 - `Total_Trans_Amt`, `Total_Trans_Ct`, `Total_Amt_Chng_Q4_Q1`, `Total_Ct_Chng_Q4_Q1` 컬럼과 타겟인 Attrition_Flag를 비교했을 때, 네 개의 독립변수 모두 값이 적을 수록 이탈율이 높다는 것을 알 수 있음
-
-![image.png](attachment:e5e0fd19-be47-4253-a78d-db5580f93aca:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_거래활동_히트맵.png" width="900" alt="EDA_거래활동_히트맵"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - `Total_Trans_Amt` : 총 거래 금액
     - 거래 금액이 적을수록 이탈률이 높음
     - 특히 하위 30%의 고객은 이탈 비중이 매우 큼
-    
-    ![image.png](attachment:bc28c89a-aeaf-4149-b486-4cd895b0f41f:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_거래활동_총거래금액.png" width="900" alt="EDA_거래활동_총거래금액"><br />
+      </td>
+    </tr>
+  </table>
+</div>
     
 - `Total_Trans_Ct`  : 총 거래 횟수
     - 거래 횟수가 적을수록 이탈률이 높음
     - 60회 이하의 고객이 고위험군임.
-    
-    ![image.png](attachment:8ba2791f-980b-4add-b370-0e12b0701338:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_거래활동_총거래횟수.png" width="900" alt="EDA_거래활동_총거래횟수"><br />
+      </td>
+    </tr>
+  </table>
+</div>
     
 - `Total_Amt_Chng_Q4_Q1` : 4분기 대비 1분기 금액 변화
     - 4분기 대비해서 거래 금액이 줄어들었다면 이탈의 조짐을 보인다 할 수 있음.
     - 지속적인 사용이 안정적임
-    
-    ![image.png](attachment:d8fe45e1-8bf3-4df2-a307-5eafafe5fb39:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_거래활동_분기별거래금액변화율" width="900" alt="EDA_거래활동_분기별거래금액변화율"><br />
+      </td>
+    </tr>
+  </table>
+</div>
     
 - 위의 4개의 컬럼은 모두 고객의 카드 사용 활동성과 변화의 추이를 반영하고 있음 → 이탈 예측의 핵심 신호를 도출할 수 있음
 
@@ -458,7 +554,8 @@
 - `Total_Amt_Chng_Q4_Q1`, `Total_Ct_Chng_Q4_Q1`가 **급감한 고객**은 이탈률이 높음
 - 특히 변화량이 0.5 이하인 고객에서 **급격한 이탈 증가 현상**이 포착됨
 
-### 4. 은행 관계
+---
+### 💰 4. 은행 관계
 - 은행과의 관계 지속성과 상호작용 빈도를 나타내는 열들로, 충성도와 이탈 간 연관성 파악
 
 ### **4.1. 특성**
@@ -468,25 +565,50 @@
 - `Contacts_Count_12_mon` : 지난 12개월 동안 고객과의 연락 횟수
   
 ### 4.1.1. 가입 고객 분포
-![image.png](attachment:af46b2f2-b19c-41f6-be93-b0511268534e:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_경제적요인_소득 대비 평균 이용률 분석.png" width="900" alt="EDA_경제적요인_소득 대비 평균 이용률 분석"><br />
+      </td>
+    </tr>
+  </table>
+</div>
+
 - 유지 그룹과 이탈 그룹을 나누어 비교
 
+---
 ### ✨ 인사이트
 
 ### 4.1.2. `Months_on_book` : 가입 기간 (개월)
 
 - 데이터는 전체적으로 가입기간 약 36개월(3년) 지점에서 유지 고객과 이탈 고객의 비율이 많음
     - 해당 시점에 신규 유입이 많았음을 의미 (대규모 광고나 캠페인을 진행 추정)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_은행관계_가입고객분포.png" width="900" alt="EDA_은행관계_가입고객분포"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
-![image.png](attachment:00bfa876-4c7d-4a44-815a-1785347178fb:image.png)
-
+---
 ### 4.1.3. `Total_Relationship_Count` : 보유한 상품 개수
 
 - 상품 수가 적은 그룹은 이탈 가능성이 큼
 - 상품 수가 많더라도 일부 고객은 이탈할 가능성이 있음
     - 해당 고객을 대상으로 한 맞춤형 관리 전략 필요.
-
-![image.png](attachment:64e7c49e-070f-4990-8944-dc4993fddf1e:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_은행관계_보유한상품개수.png" width="900" alt="EDA_은행관계_보유한상품개수"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - **1~3개의 상품을 보유한 경우**
     - 이탈 고객의 비율이 유지 고객보다 높음.
@@ -497,9 +619,17 @@
         - 은행과 더 깊은 관계를 형성한 것으로 보임
         - 일부 고객은 여전히 이탈할 가능성 있음
 
+---
 ### 4.1.4. `Months_Inactive_12_mon` : 지난 12개월 동안 거래를 하지 않은 기간 (개월)
-
-![image.png](attachment:8fb6417d-d299-4b22-b5a0-3c0088dd89b4:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_은행관계_지난12개월간무거래기간.png" width="900" alt="EDA_은행관계_지난12개월간무거래기간"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - 0 ~ 1개월
     - 유지 고객의 비율이 더 높음
@@ -509,43 +639,78 @@
     - 약 이탈 고객의 80%가 이 시점에 이탈
         - 특히, 거래하지 않은 기간이 약 3개월인 시점에 이탈 고객의 비율이 가장 높음 (약 50%)
 
+---
 ### 4.1.5.`Contacts_Count_12_mon` : 지난 12개월 동안 고객과의 연락 횟수
 
 - 연락이 많아질수록 이탈 고객의 비율이 높음 (3회 이상)
     - 컴플레인이 제대로 해결되지 않은 경우로 판단
-
-![image.png](attachment:4f57d9d1-975a-4d7a-b8ea-42cd882371fa:image.png)
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_은행관계_지난12개월간고객과의연락횟수.png" width="900" alt="EDA_은행관계_지난12개월간고객과의연락횟수"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
-### 5. 카드 및 신용 상태
+### 💰 5. 카드 및 신용 상태
 - 카드 종류와 신용 사용 가능 금액, 사전 계산된 이탈 확률을 포함하며, 카드 관련 특성이 이탈에 미치는 영향 분석
     - 사용 가능 금액이 높고 기본 카드(Blue)를 사용하는 고객의 이탈 패턴 확인
 
 ### **5.1. 특성**
 - `Card_Category` : 카드 종류
 - `Avg_Open_To_Buy` : 평균 한도 금액
-  
+
+---
 ### ✨ 인사이트
-![image.png](attachment:daa235a0-2eb5-4d2a-a112-b3f07419f1ea:image.png)
+### 5.1.1. 카드 종류별 평균 이탈율
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_카드신용상태_카드종류별평균이탈율.png" width="900" alt="EDA_카드신용상태_카드종류별평균이탈율"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - 카드 종류별 이탈율 분석
     - 생각한 거와 반대로 Silver 등급을 제외하고 카드 등급이 오를 수록 이탈율이 증가함
         - Blue카드의 소유자들이 데이터 값의 대부분을 차지하고, Gold, Platinum 등급의 카드를 소유한 고객의 숫가 압도적으로 적기 때문에 해당 고객의 이탈 여부에 따른 이탈율 변화량이 큼
         - 데이터 자체의 문제일 수 도 있음
 
-![image.png](attachment:e42a3da5-7bf4-4181-9054-569772960d76:image.png)
+---
+### 5.1.2. 평균 신용카드 한도별 이탈율
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_카드신용상태_평균신용카드한도별이탈율.png" width="900" alt="EDA_카드신용상태_평균신용카드한도별이탈율"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - 평균 사용액별 (카드 한도) 이탈율 분석
     - 매우 낮음을 제외한 낮음부터 매우 높음 까지 이탈율이 하강하는 모습을 보여줌
-        - 평균 신용카드 한도가 높아지면, 이탈율이 적어진다는 것을 알 수 있음
-            
-            → 평균 신용카드 한도가 높은 고객을 유치하는 것이 고객 이탈을 막는 방법일 수 있음
-            
+        - 평균 신용카드 한도가 높아지면, 이탈율이 적어진다는 것을 알 수 있음            
+→ 평균 신용카드 한도가 높은 고객을 유치하는 것이 고객 이탈을 막는 방법일 수 있음
 
-![image.png](attachment:03eb9740-c5be-4129-ada7-47a3f2bb034b:image.png)
+---
+### 5.1.3. 카드종류, 평균 사용가능 한도구간별 이탈율
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" valign="middle">
+        <img src="./img/EDA_카드신용상태_카드종류,평균사용가능한도구간별이탈율.png" width="900" alt="EDA_카드신용상태_카드종류,평균사용가능한도구간별이탈율"><br />
+      </td>
+    </tr>
+  </table>
+</div>
 
 - 카드 종류와, 신용카드 한도에 따른 이탈율 분석
-    
 | 카드 종류    | 평균 사용액 구간 | 이탈 여부    |
 | -------- | --------- | -------- |
 | Blue     | 매우 낮음     | 0.089744 |
