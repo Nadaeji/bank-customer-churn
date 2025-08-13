@@ -12,41 +12,26 @@
 ## 🏦 팀 소개 🏦
 
 - **팀명: 오인조**
+> **GitHub** 
 <div align="center">
-  <table>
-    <thead>
-      <td align="center">
-        <a href="https://github.com/DawnSurplus">
-          <img src="https://github.com/DawnSurplus.png" width="150" alt="성호진"/><br />
-          <strong>성호진</strong>
-        </a><br />
-      </td>
-      <td align="center">
-        <a href="https://github.com/GTU9">
-          <img src="https://github.com/GTU9.png" width="150" alt="김상익"/><br />
-          <strong>김상익</strong>
-        </a><br />
-      </td>
-      <td align="center">
-        <a href="https://github.com/Nadaeji">
-          <img src="https://avatars.githubusercontent.com/u/138211013?v=4" width="150" alt="나지윤"/><br />
-          <strong>나지윤</strong>
-        </a><br />
-      </td>
-      <td align="center">
-        <a href="https://github.com/Kimjeongwon12">
-          <img src="https://avatars.githubusercontent.com/u/109503974?v=4" width="150" alt="김정원"/><br />
-          <strong>김정원</strong>
-        </a><br />
-      </td>
-      <td align="center">
-        <a href="https://github.com/Minor-Mino">
-          <img src="https://github.com/Minor-Mino.png" width="150" alt="정민호"/><br />
-          <strong>정민호</strong>
-        </a><br />
-      </td>
-    </thead>
-  </table>
+<table width="80%" cellspacing="0" cellpadding="12" border="0">
+  <tbody>
+    <tr>
+      <td align="center" width="20%"><img src="https://github.com/GTU9.png" width="180" height="180" alt="김상익"></td>
+      <td align="center" width="20%"><img src="https://github.com/Kimjeongwon12.png" width="180" height="180" alt="김정원"></td>
+      <td align="center" width="20%"><img src="https://github.com/Nadaeji.png" width="180" height="180" alt="나지윤"></td>
+      <td align="center" width="20%"><img src="https://github.com/DawnSurplus.png" width="180" height="180" alt="성호진"></td>
+      <td align="center" width="20%"><img src="https://github.com/Minor-Mino.png" width="180" height="180" alt="정민호"></td>
+    </tr>
+    <tr>
+      <td align="center"><a href="https://github.com/GTU9"><strong>김상익</strong></a></td>
+      <td align="center"><a href="https://github.com/Kimjeongwon12"><strong>김정원</strong></a></td>
+      <td align="center"><a href="https://github.com/Nadaeji"><strong>나지윤</strong></a></td>
+      <td align="center"><a href="https://github.com/DawnSurplus"><strong>성호진</strong></a></td>
+      <td align="center"><a href="https://github.com/Minor-Mino"><strong>정민호</strong></a></td>
+    </tr>
+  </tbody>
+</table>
 </div>
 
 ---
